@@ -11,13 +11,15 @@ Implementation of Deep Cooperative Learning
  - torchvision 0.3.0
  - Optuna 0.13.0
  - easydict 1.9
+ - graphviz 0.10.1
+
 
 
 ## Usage
 1. Train pre-trained model
 ```
-ipython ./pre-train.py -- --target_model=ResNe32 --dataset=CIFAR100 --gpu_id=0 --save_dir=./pre-train/ResNet32/
-ipython ./pre-train.py -- --target_model=ResNe110 --dataset=CIFAR100 --gpu_id=0 --save_dir=./pre-train/ResNet110/
+ipython ./pre-train.py -- --target_model=ResNet32 --dataset=CIFAR100 --gpu_id=0 --save_dir=./pre-train/ResNet32/
+ipython ./pre-train.py -- --target_model=ResNet110 --dataset=CIFAR100 --gpu_id=0 --save_dir=./pre-train/ResNet110/
 ipython ./pre-train.py -- --target_model=WRN28_2 --dataset=CIFAR100 --gpu_id=0 --save_dir=./pre-train/WRN28_2/
 ```
 
