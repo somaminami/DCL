@@ -1,6 +1,6 @@
-# Deep Cooperative Learning
+# Deep Collaborative Learning
 
-Implementation of Deep Cooperative Learning
+Implementation of "Knowledge Transfer Graph for Deep Collaborative Learning" ([arXiv](https://arxiv.org/abs/1909.04286))
 
 
 ## Environment
@@ -16,14 +16,14 @@ Implementation of Deep Cooperative Learning
 
 
 ## Usage
-1. Train pre-trained model
+1. Train pre-trained model.
 ```
 ipython ./pre-train.py -- --target_model=ResNet32 --dataset=CIFAR100 --gpu_id=0 --save_dir=./pre-train/ResNet32/
 ipython ./pre-train.py -- --target_model=ResNet110 --dataset=CIFAR100 --gpu_id=0 --save_dir=./pre-train/ResNet110/
 ipython ./pre-train.py -- --target_model=WRN28_2 --dataset=CIFAR100 --gpu_id=0 --save_dir=./pre-train/WRN28_2/
 ```
 
-2. Optimize knowledge transfer graph in parallel distributed environment  
+2. Optimize knowledge transfer graph in parallel distributed environment.
 Run train.py mltiple times.
 ```
 ipython ./train.py -- --num_nodes=3 --target_model=ResNet32 --dataset=CIFAR100 --gpu_id=0 --num_trial=1500 --optuna_dir=./result/
